@@ -67,7 +67,7 @@ const Contact = () => {
             </p>
 
             <div className="contact__channels">
-              <a href="mailto:anshudharmashahary@gmail.com" className="contact__channel" id="contact-email-link" aria-label="Send email">
+              <a href="mailto:anzmhry@gmail.com" className="contact__channel" id="contact-email-link" aria-label="Send email">
                 <div className="contact__channel-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect width="20" height="16" x="2" y="4" rx="2" />
@@ -76,7 +76,7 @@ const Contact = () => {
                 </div>
                 <div className="contact__channel-text">
                   <span className="contact__channel-label">Email</span>
-                  <span className="contact__channel-value">anshudharmashahary@gmail.com</span>
+                  <span className="contact__channel-value">anzmhry@gmail.com</span>
                 </div>
               </a>
 
