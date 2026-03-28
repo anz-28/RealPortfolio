@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import DOMPurify from 'dompurify';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 
@@ -24,13 +25,37 @@ const Contact = () => {
     setStatus('sending');
     setErrorMsg('');
 
+    const cleanName = DOMPurify.sanitize(formData.name, { ALLOWED_TAGS: [], ALLOWED_ATTR: [] }).trim();
+    const cleanMessage = DOMPurify.sanitize(formData.message, { ALLOWED_TAGS: [], ALLOWED_ATTR: [] }).trim();
+
+    if (!cleanName || !cleanMessage) {
+      setStatus('error');
+      setErrorMsg('Please provide both name and message without HTML/script tags.');
+      setTimeout(() => setStatus('idle'), 5000);
+      return;
+    }
+
+    if (cleanName.length > 100) {
+      setStatus('error');
+      setErrorMsg('Name too long (max 100 characters).');
+      setTimeout(() => setStatus('idle'), 5000);
+      return;
+    }
+
+    if (cleanMessage.length > 1000) {
+      setStatus('error');
+      setErrorMsg('Message too long (max 1000 characters).');
+      setTimeout(() => setStatus('idle'), 5000);
+      return;
+    }
+
     try {
       await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         {
-          name: formData.name,
-          message: formData.message,
+          name: cleanName,
+          message: cleanMessage,
         },
         EMAILJS_PUBLIC_KEY
       );
