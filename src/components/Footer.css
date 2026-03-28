@@ -1,0 +1,93 @@
+
+.footer {
+  padding: var(--space-2xl) var(--space-xl);
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border-default), transparent);
+}
+
+.footer__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.footer__brand {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  gap: 2px;
+}
+
+.footer__brand-bracket {
+  color: var(--accent-primary);
+  font-weight: 300;
+}
+
+.footer__brand-name {
+  color: var(--text-primary);
+  letter-spacing: 2px;
+}
+
+.footer__tagline {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.footer__divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin-bottom: var(--space-lg);
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__copyright {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footer__copyright-symbol {
+  color: var(--accent-primary);
+}
+
+.footer__note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.footer__heart {
+  color: var(--accent-primary);
+}
+
+
+@media (max-width: 768px) {
+  .footer__top,
+  .footer__bottom {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+}
