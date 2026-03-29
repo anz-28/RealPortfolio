@@ -30,7 +30,7 @@ const projectsData = [
     category: 'Backend',
     year: '2024',
     status: 'Live',
-    links: { github: '#', live: '#' },
+    links: { github: '#', live: 'https://chatappanz.vercel.app/' },
   },
   {
     id: 'project-4',
