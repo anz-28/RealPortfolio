@@ -78,14 +78,14 @@ const Contact = () => {
   return (
     <section className="contact" id="contact">
       <div className="contact__container">
-        <div className="contact__header">
+        <div className="contact__header" data-aos="fade-up">
           <span className="section-index">04</span>
           <h2 className="section-title">Get in Touch</h2>
           <div className="section-line" />
         </div>
 
         <div className="contact__grid">
-          <div className="contact__info">
+          <div className="contact__info" data-aos="fade-right" data-aos-delay="100">
             <p className="contact__info-text">
               Have a project in mind, or just want to connect? Feel free to reach out.
               I'm always open to discussing new opportunities and ideas.
@@ -133,7 +133,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="contact__form" onSubmit={handleSubmit} id="contact-form">
+          <form className="contact__form" onSubmit={handleSubmit} id="contact-form" data-aos="fade-left" data-aos-delay="200">
             <div className="contact__field">
               <label className="contact__label" htmlFor="contact-name">Name</label>
               <input

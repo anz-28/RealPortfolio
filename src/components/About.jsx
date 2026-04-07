@@ -4,14 +4,14 @@ const About = () => {
   return (
     <section className="about" id="about">
       <div className="about__container">
-        <div className="about__header">
+        <div className="about__header" data-aos="fade-up">
           <span className="section-index">01</span>
           <h2 className="section-title">About Me</h2>
           <div className="section-line" />
         </div>
 
         <div className="about__grid">
-          <div className="about__text">
+          <div className="about__text" data-aos="fade-right" data-aos-delay="100">
             <p className="about__description">
               I'm a passionate full-stack developer who builds things for the web. 
               I enjoy turning complex problems into simple, beautiful, and intuitive solutions.
@@ -38,7 +38,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="about__terminal">
+          <div className="about__terminal" data-aos="fade-left" data-aos-delay="200">
             <div className="about__terminal-header">
               <div className="about__terminal-dots">
                 <span className="about__terminal-dot about__terminal-dot--red" />

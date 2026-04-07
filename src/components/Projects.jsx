@@ -10,7 +10,7 @@ const projectsData = [
     category: 'Full-Stack',
     year: '2025',
     status: 'Live',
-    links: { github: '#', live: '#' },
+    links: { github: '#', live: 'https://anzstore.vercel.app' },
   },
   {
     id: 'project-2',
@@ -50,13 +50,13 @@ const Projects = () => {
   return (
     <section className="projects" id="projects">
       <div className="projects__container">
-        <div className="projects__header">
+        <div className="projects__header" data-aos="fade-up">
           <span className="section-index">03</span>
           <h2 className="section-title">Projects</h2>
           <div className="section-line" />
         </div>
 
-        <div className="projects__grid">
+        <div className="projects__grid" data-aos="fade-up" data-aos-delay="100">
           {projectsData.map((project, index) => (
             <article
               key={project.id}
@@ -64,7 +64,6 @@ const Projects = () => {
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
               id={project.id}
-              style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Top bar */}
               <div className="projects__card-topbar">

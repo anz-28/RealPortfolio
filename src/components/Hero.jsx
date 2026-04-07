@@ -104,8 +104,8 @@ const Hero = () => {
       <div className="hero__corner hero__corner--bl" />
       <div className="hero__corner hero__corner--br" />
 
-      <div className="hero__content">
-        <div className="hero__tag">
+      <div className="hero__content" data-aos="fade-up" data-aos-delay="100">
+        <div className="hero__tag" data-aos="fade-down" data-aos-delay="150">
           <span className="hero__tag-dot" />
           <span className="hero__tag-text">Available for work</span>
         </div>
@@ -120,11 +120,11 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className="hero__subtitle">
+        <p className="hero__subtitle" data-aos="fade-up" data-aos-delay="250">
           Full-Stack Developer crafting clean, efficient &amp; scalable digital experiences.
         </p>
 
-        <div className="hero__meta">
+        <div className="hero__meta" data-aos="fade-up" data-aos-delay="350">
           <div className="hero__meta-item">
             <span className="hero__meta-label">Stack</span>
             <span className="hero__meta-value">JS · Python · React</span>
@@ -136,7 +136,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="hero__actions">
+        <div className="hero__actions" data-aos="fade-up" data-aos-delay="450">
           <button
             className="hero__btn hero__btn--primary"
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
@@ -157,7 +157,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hero__scroll-indicator" id="hero-scroll">
+      <div className="hero__scroll-indicator" id="hero-scroll" data-aos="fade-in" data-aos-delay="700">
         <div className="hero__scroll-line" />
         <span className="hero__scroll-text">Scroll</span>
       </div>

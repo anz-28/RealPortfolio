@@ -46,13 +46,13 @@ const Skills = () => {
   return (
     <section className="skills" id="skills">
       <div className="skills__container">
-        <div className="skills__header">
+        <div className="skills__header" data-aos="fade-up">
           <span className="section-index">02</span>
           <h2 className="section-title">Skills</h2>
           <div className="section-line" />
         </div>
 
-        <div className="skills__grid">
+        <div className="skills__grid" data-aos="fade-up" data-aos-delay="100">
           {skillsData.map((skill, index) => (
             <div
               key={skill.id}
@@ -60,7 +60,6 @@ const Skills = () => {
               onMouseEnter={() => setActiveSkill(skill.id)}
               onMouseLeave={() => setActiveSkill(null)}
               id={`skill-${skill.id}`}
-              style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="skills__card-top">
                 <div className="skills__card-icon">
