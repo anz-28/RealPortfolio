@@ -1,6 +1,6 @@
 
 .footer {
-  padding: var(--space-2xl) var(--space-xl);
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
   background: var(--bg-primary);
   position: relative;
 }
@@ -29,7 +29,7 @@
 
 .footer__brand {
   font-family: var(--font-mono);
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
   font-weight: 600;
   display: flex;
   gap: 2px;
@@ -47,7 +47,7 @@
 
 .footer__tagline {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: clamp(0.7rem, 1.8vw, 0.75rem);
   color: var(--text-muted);
   letter-spacing: 0.5px;
 }
@@ -89,5 +89,16 @@
     flex-direction: column;
     gap: var(--space-sm);
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-bottom: 1.5rem;
+  }
+
+  .footer__copyright,
+  .footer__note {
+    font-size: 0.72rem;
   }
 }

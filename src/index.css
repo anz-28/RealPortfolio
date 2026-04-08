@@ -59,6 +59,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--accent-tertiary) var(--bg-secondary);
+  overflow-x: clip;
 }
 
 body {
@@ -68,7 +69,13 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 ::-webkit-scrollbar {
@@ -96,6 +103,20 @@ ul, ol {
 img {
   max-width: 100%;
   display: block;
+}
+
+section {
+  padding-inline: clamp(1rem, 4vw, 2rem) !important;
+}
+
+.section-title {
+  font-size: clamp(1.35rem, 2.8vw, 1.8rem);
+}
+
+@media (max-width: 480px) {
+  section {
+    padding-inline: 0.9rem !important;
+  }
 }
 
 

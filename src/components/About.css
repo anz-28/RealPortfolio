@@ -1,5 +1,5 @@
 .about {
-  padding: var(--space-4xl) var(--space-xl);
+  padding: clamp(3.5rem, 8vw, 6rem) clamp(1rem, 4vw, 2rem);
   position: relative;
 }
 
@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-md);
-  margin-bottom: var(--space-3xl);
+  margin-bottom: clamp(1.5rem, 5vw, 4rem);
 }
 
 .section-index {
@@ -45,7 +45,7 @@
 }
 
 .about__description {
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 2.2vw, 1rem);
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: var(--space-lg);
@@ -129,7 +129,7 @@
 }
 
 .about__terminal-body {
-  padding: var(--space-lg);
+  padding: clamp(0.9rem, 2.8vw, 1.5rem);
 }
 
 .about__terminal-line {
@@ -156,8 +156,9 @@
   font-size: 0.8rem;
   color: var(--text-secondary);
   line-height: 1.6;
-  white-space: pre;
-  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-x: clip;
+  word-break: break-word;
 }
 
 @media (max-width: 768px) {
@@ -172,5 +173,24 @@
 
   .about__stat-number {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__stats {
+    flex-wrap: wrap;
+    row-gap: var(--space-md);
+  }
+
+  .about__stat {
+    min-width: 42%;
+  }
+
+  .about__terminal-header {
+    padding: 0.75rem 0.9rem;
+  }
+
+  .about__terminal-output {
+    font-size: 0.72rem;
   }
 }

@@ -157,7 +157,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hero__scroll-indicator" id="hero-scroll" data-aos="fade-in" data-aos-delay="700">
+      <div className="hero__scroll-indicator" id="hero-scroll">
         <div className="hero__scroll-line" />
         <span className="hero__scroll-text">Scroll</span>
       </div>
